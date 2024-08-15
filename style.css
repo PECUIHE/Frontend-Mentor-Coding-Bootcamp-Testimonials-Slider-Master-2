@@ -1,142 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
 
-  * {
-    margin: 0;
-    padding: 0;
-    font-family: Verdana, 'Geneva', Tahoma, sans-serif;
-    box-sizing: border-box;
-  }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Inter', sans-serif;
+  background: url(./images/pattern-bg.svg) center;
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: 80% 0%;
+}
+
+.container {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  width: 768px;
+  position: relative;
+}
+
+.image img {
+  width: 350px;
+  height: 380px;
+  border-radius: 10px;
+  margin-top: 50px;
+}
+
+.feedback {
+  position: relative;
+  text-align: justify;
+  line-height: 2rem;
+}
+
+.feedback img {
+  height: 60px;
+  position: absolute;
+  top: -40px;
+  left: 50px;
+}
+
+.feedback p {
+  color: hsl(240, 38%, 20%);
+  font-size: 18px;
+}
+
+.name {
+  color: hsl(240, 38%, 20%);
+  padding-top: 2rem;
+}
+
+.role {
+  color: hsl(240, 18%, 77%);
+  padding-left: 10px;
+}
+
+.slider-container {
+  position: relative;
+  
+}
+
+.button {
+  display: inline-block;
+  box-shadow: 1px 4px 5px hsl(240, 38%, 20%);
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px;
+  position: absolute;
+  bottom: 0.05%;
+  left: 20%;
+}
+
+.button img {
+  cursor: pointer;
+  padding: 8px 10px 5px 10px;
+}
+
+.hide {
+  display: none;
+}
+
+footer img {
+  width: 100%;
+  margin-left: -50%;
+}
+
+
+@media (max-width: 800px) {
   body {
-    min-height: 100vh;
+    background: url(./images/pattern-bg.svg) top;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: 50% 1%;
   }
 
-  .slider {
-    position: relative;
-    width: 100%;
-    margin: auto;
-    overflow: hidden;
+  .container {
+    flex-direction: column;
+    width: 350px;
   }
 
-  .picture {
-    width: 100%;
-    max-width: 350px;
-    border-radius: 10px;
+  .image img {
+    width: 200px;
+    height: 200px;
+    margin-top: 30px;
   }
 
-  .slide {
-    background: url(./images/pattern-bg.svg)no-repeat top/contain;
-    margin: 20px;
-    padding: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+  .feedback {
     text-align: center;
-    gap: 5px;
-    line-height: 1.3;
-    display: none;
+    line-height: 1.2rem;
+    margin-top: 70px;
   }
 
-  .content {
-    color: hsl(240, 38%, 20%);
-    width: 100%;
-    max-width: 350px;
+  .feedback img {
+      left: 40%;
   }
 
-  .quotes {
-    position: absolute;
-    width: 100%;
-    max-width: 60px;
-    margin-top:-30px;
-    margin-left: 25%;
+  .feedback p {
+    font-size: 16px;
   }
 
-  .skill {
-    color: hsl(240, 18%, 77%);
-    font-size: 13px;
+  .name {
+    padding-top: 1rem;
   }
 
-  div.displaySlide {
+  .role {
     display: block;
-    animation-name: fade;
-    animation-duration: 1s;
   }
 
-  button {
-    position: absolute;
-    top: 44%;
-    transform: translateY(-50%);
-    font-size: 1.5rem;
-    padding: 1px 20px;
-    background-color: white;
-    color: hsla(0, 0%, 0%, 0.5);
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
+  .button {
+    bottom: -5%;
+    left: 35%;
   }
 
-  .prev {
-    left: 40%;
+  footer img {
+    max-width: 450px;
+    margin-left: 0%;
   }
+}
 
-  .next {
-    right: 40%;
-  }
 
-  button:hover {
-    background-color: hsla(0, 0%, 0%, 0.5);
-    color: hsl(0, 0%, 100%);
-  }
-
-  .footer {
-    width: 100%;
-    max-width: 400px;
-  }
-
-  @keyframes fade {
-    from {opacity: 0.5}
-    to {opacity: 1}
-  }
-
-  @media only screen and (min-width: 800px) {
-
-    .slide {
-      display: flex;
-      flex-direction: row-reverse;
-    }
-
-    .content {
-      position: absolute;
-      margin-left: -45%;
-      text-align: justify;
-    }
-
-    .quotes {
-        margin-left: 10%;
-    }
-
-    .personal-details {
-      display: flex;
-      gap: 10px;
-    }
-
-    .prev {
-        left: 46%;
-        top: 70%;
-    }
-
-    .next {
-        right: 46%;
-        top: 70%;
-    }
-
-  }
-
-  .attribution {
-    font-size: 11px;
-    text-align: center;
-  }
-  .attribution a {
-    color: hsl(228, 45%, 44%);
-  }
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
 
